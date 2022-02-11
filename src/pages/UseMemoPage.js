@@ -32,7 +32,8 @@ const UseMemoPage = ({navigation}) => {
   // without implement useMemo
   // const slowedName = slowFunction(values.name);
 
-  // implement useMemo
+  // implement useMemo, kalo ngga implement ini ketika tombol change theme diklik maka
+  // akan ikut slow ganti warnanya walaupun si tombol change theme ini tidak memanggil values.name sama sekali
   const slowedName = useMemo(() => {
     return slowFunction(values.name);
   }, [values.name]);
